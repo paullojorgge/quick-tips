@@ -43,3 +43,17 @@ route -n
 
 
 ---
+
+### OpenSSL
+
+#### Verify that a private key matches a certificate
+In order to process with this action we need to i) check the consistency of the
+private key and ii) compare the modulus of the public key in the certificate against the
+modulus of the private key:
+
+1. To verify the consistency: `openssl rsa -modulus -noout -in my.key | openssl md5`
+2. To view the modulus: `openssl x509 -modulus -noout -in my.crt | openssl md5`
+
+If the first command show any errors, or if the modulus of the public key in the
+certificate and the modulus of the private key do not match, then it means that we
+are not using the correct private key.
