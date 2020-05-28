@@ -7,7 +7,7 @@
 5. [OpenSSL](#openssl)<br />
 5.1 [Verify that a private key matches a certificate](#verify-that-a-private-key-matches-a-certificate)<br />
 5.2 [How verify if TLS1.2 is supported on a remote server?](#how-verify-if-TLS1.2-is-supported-on-a-remote-server?)<br />
-
+5. [SSH](#ssh)<br />
 
 ---
 
@@ -160,4 +160,9 @@ NOTE: if port is filtered or the previous command doesn't work just try to use t
     ```
     12:58 $ sudo nmap -sV --script ssl-enum-ciphers -p 443 google.com	
     ```
+
+### SSH
+List of some very interesting articles:
+* [How to Use SSH Tunneling to Access Restricted Servers and Browse Securely](https://www.howtogeek.com/168145/how-to-use-ssh-tunneling/)
+* [How To Route Web Traffic Securely Without a VPN Using a SOCKS Tunnel](https://www.digitalocean.com/community/tutorials/how-to-route-web-traffic-securely-without-a-vpn-using-a-socks-tunnel)
 
